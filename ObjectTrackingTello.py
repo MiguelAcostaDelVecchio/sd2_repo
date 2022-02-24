@@ -168,6 +168,7 @@ while True:
     getContours(imgDil, imgContour)
     display(imgContour)
 
+
     ################# FLIGHT
     if startCounter == 0:
        me.takeoff()
@@ -188,6 +189,7 @@ while True:
     if me.send_rc_control:
        me.send_rc_control(me.left_right_velocity, me.for_back_velocity, me.up_down_velocity, me.yaw_velocity)
     print(dir)
+
 
     stack = stackImages(0.9, ([img, result], [imgDil, imgContour]))
     cv2.imshow('Horizontal Stacking', stack)
